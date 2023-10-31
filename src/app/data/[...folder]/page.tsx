@@ -1,6 +1,5 @@
 import fs from 'fs'
 import Link from 'next/link'
-import ApiImage from 'ApiImage'
 import styles from './Folder.module.css'
 
 import { PiWarning } from 'react-icons/pi'
@@ -88,44 +87,44 @@ function NonBaseFolder(props){
       return (
         <GoesHrit dir={dir} />
       )
-    case dir.includes('noaa_hrpt'):
-      var avhrrChannels = [
-        '1.png',
-        '2.png',
-        '3a.png',
-        '3b.png',
-        '4.png',
-        '4_projected',
-        '5.png'
-      ]
-      // 1 - visible
-      // 2 - near infrared
-      // 3a - thermal infrared (3.55 - 3.93 um)
-      // 3b - thermal infrared (10.3 - 11.3 um)
-      // 4 - thermal infrared (11.5 - 12.5 um)
-      // 4_projected - projected
+    // case dir.includes('noaa_hrpt'):
+    //   var avhrrChannels = [
+    //     '1.png',
+    //     '2.png',
+    //     '3a.png',
+    //     '3b.png',
+    //     '4.png',
+    //     '4_projected',
+    //     '5.png'
+    //   ]
+    //   // 1 - visible
+    //   // 2 - near infrared
+    //   // 3a - thermal infrared (3.55 - 3.93 um)
+    //   // 3b - thermal infrared (10.3 - 11.3 um)
+    //   // 4 - thermal infrared (11.5 - 12.5 um)
+    //   // 4_projected - projected
 
-      var amsu, avhrr, mhs, sem
-      fs.existsSync(dir + '/AMSU') ? amsu = true : amsu = false
-      fs.existsSync(dir + '/AVHRR') ? avhrr = true : avhrr = false
-      fs.existsSync(dir + '/HIRS') ? mhs = true : mhs = false
-      fs.existsSync(dir + '/MHS') ? mhs = true : mhs = false
-      fs.existsSync(dir + '/SEM') ? sem = true : sem = false
-      return (
-        <>
-        <div className={styles.folderList}>
-          <div className={styles.folder}>
-            {avhrr && avhrrChannels.map((channel, index) => {
-              var avhrrDir = fs.readdirSync(dir + '/AVHRR')
-              var avhrrFilter = avhrrDir.filter(file => file.includes(channel))
-              return (
-                <ApiImage key={index} type={'AVHRR'} root={'/AVHRR/'} dir={dir} file={avhrrFilter} channel={channel} />
-              )
-            })}
-          </div>
-        </div>
-        </>
-      )
+    //   var amsu, avhrr, mhs, sem
+    //   fs.existsSync(dir + '/AMSU') ? amsu = true : amsu = false
+    //   fs.existsSync(dir + '/AVHRR') ? avhrr = true : avhrr = false
+    //   fs.existsSync(dir + '/HIRS') ? mhs = true : mhs = false
+    //   fs.existsSync(dir + '/MHS') ? mhs = true : mhs = false
+    //   fs.existsSync(dir + '/SEM') ? sem = true : sem = false
+    //   return (
+    //     <>
+    //     <div className={styles.folderList}>
+    //       <div className={styles.folder}>
+    //         {avhrr && avhrrChannels.map((channel, index) => {
+    //           var avhrrDir = fs.readdirSync(dir + '/AVHRR')
+    //           var avhrrFilter = avhrrDir.filter(file => file.includes(channel))
+    //           return (
+    //             <ApiImage key={index} type={'AVHRR'} root={'/AVHRR/'} dir={dir} file={avhrrFilter} channel={channel} />
+    //           )
+    //         })}
+    //       </div>
+    //     </div>
+    //     </>
+    //   )
   }
 }
 
