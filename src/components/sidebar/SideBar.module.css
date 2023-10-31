@@ -1,0 +1,26 @@
+.sidebar {
+    background-color: antiquewhite;
+    width: 400px;
+    height: 100vh;
+    padding: 10px;
+    overflow-y: scroll;
+}
+.sidebar * {
+    color: black;
+}
+.folderList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.folderList a {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    width: 100%;
+    padding: 3px;
+    margin: 2.5px 0;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid black;
+}

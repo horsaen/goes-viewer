@@ -1,0 +1,54 @@
+.page {
+  margin: 1em 2em;
+}
+
+.folderList {
+  display: flex;
+  flex-wrap: wrap;
+}
+.folderCard a {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+  width: 250px;
+  height: 60px;
+  border: #fff 1px solid;
+  border-radius: 5px;
+}
+.folderCard a {
+  color: #fff;
+  text-decoration: none;
+}
+.folderText {
+  display: flex;
+  flex-direction: column;
+}
+
+.folder {
+  display: flex;
+  flex-direction: column;
+}
+.folderTitle {
+  font-size: 20px;
+  font-weight: bold;
+}
+.imageContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.adminMessage {
+  border: #fff 3px solid;
+  border-radius: 5px;
+  width: fit-content;
+  padding: 10px;
+  width: 875px;
+}
+.adminMessage span {
+  font-size: 25px;
+}
+.adminMessage pre {
+  color: #fff;
+  font-size: 11px;
+}

@@ -1,34 +1,49 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# goes-viewer
 
-## Getting Started
+## Installation
 
-First, run the development server:
-
+Simply clone and enter the repo
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+git clone https://github.com/horsaen/goes-viewer && cd goes-viewer
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Install dependancies
+```bash
+pnpm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Support
+- GOES HRIT
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Setup
+This project is meant for displaying data produced by SatDump, other tools are currently not supported, by are expected to be supported eventually.
 
-## Learn More
+Create a .env file with the following fields
 
-To learn more about Next.js, take a look at the following resources:
+```
+NEXT_PUBLIC_LIVE_OUTPUT=/ssd/live_output
+NEXT_PUBLIC_OTHER_DIRS=[{"dir": "/ssd/2023-07-16_01-37_goes_hrit_1694Mhz", "type": "goes_hrit"}, {"dir": "/asdf/asdfadsf/asdf", "type": "noaa_hrpt"}]
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+`NEXT_PUBLIC_LIVE_OUTPUT` is the main live_output folder from satdump, if there are other folders found outside of the live_output, you can use them with `NEXT_PUBLIC_OTHER_DIRS`
+`NEXT_PUBLIC_OTHER_DIRS` is for defining external dirs, make sure that it uses proper JSON syntax, otherwise it won't work, as these dirs can have other names, please include a type along with the dir
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Currently these are the supported types:
 
-## Deploy on Vercel
+- goes_hrit
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Using
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Build
+
+```bash
+pnpm build
+```
+
+Start
+ 
+```bash
+pnpm start
+```
+
+[Access](http://localhost:3000/)

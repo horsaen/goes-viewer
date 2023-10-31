@@ -1,0 +1,20 @@
+.adminMessage {
+  border: #fff 3px solid;
+  border-radius: 5px;
+  width: fit-content;
+  padding: 10px;
+}
+.adminMessage span {
+  font-size: 25px;
+}
+.adminMessage pre {
+  color: #fff;
+  font-size: 11px;
+}
+.folder,
+.folderList,
+.product {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}

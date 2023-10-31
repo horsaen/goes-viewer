@@ -1,0 +1,74 @@
+.imageContainer {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  padding: 10px;
+  /* margin: 10px; */
+  border: 3px solid #fff;
+  border-radius: 10px;
+}
+.imageTitleContainer {
+  display: flex;
+  flex-direction: column;
+}
+.imageTitleContainer {
+  font-size: 20px;
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+.imageTitleContainer span:nth-child(2),
+.imageTitleContainer span:nth-child(3) {
+  color: #9399b2;
+}
+.imageControlContainer {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.imageControlContainer button {
+  width: fit-content;
+}
+.imageControl {
+  display: flex;
+  flex-direction: column;
+}
+.controlButtons button {
+  all: unset;
+  user-select: none;
+  color: #cad3f5;
+  cursor: pointer;
+  border: 1px solid #cad3f5;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 5px;
+}
+.controlButtons * {
+  user-select: none;
+}
+.controlButtons button:hover {
+  color: #464646;
+  background-color: #cad3f5;
+  transition: all 0.2s ease;
+}
+.controlButtons button:disabled {
+  background-color: #3d3d3d;
+  color: #9399b2;
+}
+.gifButton {
+  all: unset;
+  display: flex;
+  align-items: center;
+  color: #cad3f5;
+  font-size: 25px;
+  cursor: pointer;
+}
+.gif2Img {
+  all: unset;
+  display: flex;
+  align-items: center;
+  color: #cad3f5;
+  font-size: 25px;
+  cursor: pointer;
+  float: right;
+  padding-top: 10px;
+}
