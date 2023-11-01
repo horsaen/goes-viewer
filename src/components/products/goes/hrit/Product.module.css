@@ -1,7 +1,14 @@
+.title {
+  font-size: 32px;
+  font-weight: 600;
+}
+
 .adminMessage {
+  margin-top: 1em;
   border: #fff 3px solid;
   border-radius: 5px;
   width: fit-content;
+  height: fit-content;
   padding: 10px;
 }
 .adminMessage span {
@@ -11,10 +18,15 @@
   color: #fff;
   font-size: 11px;
 }
-.folder,
 .folderList,
+.folder,
 .product {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
+}
+.folderTitle {
+  padding-top: 1em;
+  font-size: 30px;
+  font-weight: 600;
 }

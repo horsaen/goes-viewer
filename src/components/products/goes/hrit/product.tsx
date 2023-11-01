@@ -82,7 +82,7 @@ export default function GoesHrit(props) {
 
   return (
     <div>
-      <span>GOES HRIT</span>
+      <span className={styles.title}>GOES HRIT</span>
       <div className={styles.adminMessage}>
         <span>Admin Message</span>
         <pre><PiWarning /> {adminMessage}</pre>
@@ -108,8 +108,6 @@ export default function GoesHrit(props) {
                 />
               )
             })}
-          </div>
-          <div className={styles.product}>
             {goes16 && channels.map((channel, index) => {
               var files = fs.readdirSync(dir + dirG16).filter(file => file.includes(channel.fsDesig) && !file.includes('.gif'))
               return (
@@ -126,8 +124,6 @@ export default function GoesHrit(props) {
                 />
               )
             })}
-          </div>
-          <div className={styles.product}>
             {him9 && channels.map((channel, index) => {
               var files = fs.readdirSync(dir + dirH9).filter(file => file.includes(channel.fsDesig) && !file.includes('.gif'))
               return (
